@@ -57,11 +57,11 @@ allprojects {
 dependencies {
     //按需添加
     //基础库（必须）
-    implementation "com.github.ven-coder.Assists:assists-base:v3.2.0"
+    implementation "com.github.ven-coder.Assists:assists-base:v3.2.1"
     //屏幕录制相关（可选）
-    implementation "com.github.ven-coder.Assists:assists-mp:v3.2.0"
+    implementation "com.github.ven-coder.Assists:assists-mp:v3.2.1"
     //opencv相关（可选）
-    implementation "com.github.ven-coder.Assists:assists-opcv:v3.2.0"
+    implementation "com.github.ven-coder.Assists:assists-opcv:v3.2.1"
     
 }
 ```
@@ -105,10 +105,10 @@ dependencies {
 </manifest>
 ```
 #### 1.2 开启服务
-调用```Assists.openAccessibilitySetting()```跳转到无障碍服务设置页面，找到对应的应用开启服务。
+调用```AssistsCore.openAccessibilitySetting()```跳转到无障碍服务设置页面，找到对应的应用开启服务。
 服务开启后执行以下API测试是否成功集成：
 ```
-Assists.getAllNodes().forEach { it.logNode() }
+AssistsCore.getAllNodes().forEach { it.logNode() }
 ```
 这段代码是获取当前页面所有节点元素的基本信息在Logcat（tag：assists_log）打印出来，如下图：
 
